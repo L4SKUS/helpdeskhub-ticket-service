@@ -1,4 +1,9 @@
-package com.helpdeskhub.tickets;
+package com.helpdeskhub.tickets.repository;
 
-public class TicketRepository {
+import com.helpdeskhub.tickets.model.Ticket;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface TicketRepository extends JpaRepository<Ticket, Integer> {
+
+    //Optional<Ticket> findTicketByCustomerId(Integer customerId);
 }

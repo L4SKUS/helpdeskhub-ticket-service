@@ -1,4 +1,8 @@
-package com.helpdeskhub.tickets;
+package com.helpdeskhub.tickets.enums;
 
-public class TicketPriority {
+public enum TicketPriority {
+    LOW,
+    MEDIUM,
+    HIGH,
+    CRITICAL
 }

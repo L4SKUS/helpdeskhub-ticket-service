@@ -1,4 +1,8 @@
-package com.helpdeskhub.tickets;
+package com.helpdeskhub.tickets.enums;
 
-public class TicketStatus {
+public enum TicketStatus {
+    OPEN,
+    IN_PROGRESS,
+    RESOLVED,
+    CLOSED
 }
