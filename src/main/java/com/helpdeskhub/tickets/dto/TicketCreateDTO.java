@@ -11,5 +11,4 @@ public class TicketCreateDTO {
     private TicketStatus status;
     private TicketPriority priority;
     private Integer customerId;
-    private Integer agentId;
 }

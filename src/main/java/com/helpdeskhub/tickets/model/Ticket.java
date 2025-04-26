@@ -45,7 +45,7 @@ public class Ticket {
     @Column(nullable = false)
     private Integer customerId;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private Integer agentId;
 
     @Column(nullable = false, updatable = false)

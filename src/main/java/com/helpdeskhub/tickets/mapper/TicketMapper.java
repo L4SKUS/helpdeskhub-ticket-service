@@ -18,7 +18,6 @@ public class TicketMapper {
                 .status(dto.getStatus())
                 .priority(dto.getPriority())
                 .customerId(dto.getCustomerId())
-                .agentId(dto.getAgentId())
                 .createdAt(LocalDateTime.now())
                 .updatedAt(LocalDateTime.now())
                 .build();
