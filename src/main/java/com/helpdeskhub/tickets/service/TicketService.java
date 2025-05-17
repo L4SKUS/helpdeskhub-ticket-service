@@ -40,6 +40,13 @@ public class TicketService {
                 .orElseThrow(() -> new IllegalStateException("Ticket not found with id: " + ticketId));
     }
 
+    public List<TicketResponseDTO> getTicketsByCustomerId(Integer customerId) {
+        return ticketRepository.findAllByCustomerId(customerId)
+                .stream()
+                .map(ticketMapper::toTicketResponseDTO)
+                .collect(Collectors.toList());
+    }
+
     public void deleteTicket(Integer ticketId) {
         if (!ticketRepository.existsById(ticketId)) {
             throw new IllegalStateException("Ticket not found with id: " + ticketId);

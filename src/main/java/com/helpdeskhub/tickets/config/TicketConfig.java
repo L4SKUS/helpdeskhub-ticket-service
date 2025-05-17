@@ -39,7 +39,18 @@ public class TicketConfig {
                     .updatedAt(LocalDateTime.now())
                     .build();
 
-            repository.saveAll(List.of(ticket1, ticket2));
+            Ticket ticket3 = Ticket.builder()
+                    .title("Lost mouse")
+                    .description("Mouse is lost")
+                    .status(TicketStatus.OPEN)
+                    .priority(TicketPriority.HIGH)
+                    .customerId(1)
+                    .agentId(1)
+                    .createdAt(LocalDateTime.now())
+                    .updatedAt(LocalDateTime.now())
+                    .build();
+
+            repository.saveAll(List.of(ticket1, ticket2, ticket3));
         };
     }
 }
