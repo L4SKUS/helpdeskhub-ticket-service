@@ -38,6 +38,12 @@ public class TicketMapper {
     }
 
     public void updateTicketFromDTO(Ticket ticket, TicketUpdateDTO dto) {
+        if (dto.getTitle() != null) {
+            ticket.setTitle(dto.getTitle());
+        }
+        if (dto.getDescription() != null) {
+            ticket.setDescription(dto.getDescription());
+        }
         if (dto.getStatus() != null) {
             ticket.setStatus(dto.getStatus());
         }

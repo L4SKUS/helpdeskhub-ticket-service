@@ -6,6 +6,8 @@ import lombok.Data;
 
 @Data
 public class TicketUpdateDTO {
+    private String title;
+    private String description;
     private TicketStatus status;
     private TicketPriority priority;
     private Integer agentId;
