@@ -47,6 +47,13 @@ public class TicketService {
                 .collect(Collectors.toList());
     }
 
+    public List<TicketResponseDTO> getTicketsByAgentId(Integer agentId) {
+        return ticketRepository.findAllByAgentId(agentId)
+                .stream()
+                .map(ticketMapper::toTicketResponseDTO)
+                .collect(Collectors.toList());
+    }
+
     public void deleteTicket(Integer ticketId) {
         if (!ticketRepository.existsById(ticketId)) {
             throw new IllegalStateException("Ticket not found with id: " + ticketId);

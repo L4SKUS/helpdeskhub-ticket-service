@@ -41,6 +41,12 @@ public class TicketController {
         return ResponseEntity.ok(tickets);
     }
 
+    @GetMapping("/agent/{agentId}")
+    public ResponseEntity<List<TicketResponseDTO>> getTicketsByAgentId(@PathVariable Integer agentId) {
+        List<TicketResponseDTO> tickets = ticketService.getTicketsByAgentId(agentId);
+        return ResponseEntity.ok(tickets);
+    }
+
     @PutMapping("/{ticketId}")
     public ResponseEntity<TicketResponseDTO> updateTicket(
             @PathVariable Integer ticketId,
