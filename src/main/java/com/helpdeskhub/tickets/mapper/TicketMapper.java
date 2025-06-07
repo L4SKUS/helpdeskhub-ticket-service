@@ -50,9 +50,7 @@ public class TicketMapper {
         if (dto.getPriority() != null) {
             ticket.setPriority(dto.getPriority());
         }
-        if (dto.getEmployeeId() != null) {
-            ticket.setEmployeeId(dto.getEmployeeId());
-        }
+        ticket.setEmployeeId(dto.getEmployeeId());
         ticket.setUpdatedAt(LocalDateTime.now());
     }
 }
