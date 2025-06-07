@@ -35,15 +35,15 @@ public class TicketController {
         return ResponseEntity.ok(ticket);
     }
 
-    @GetMapping("/customer/{customerId}")
-    public ResponseEntity<List<TicketResponseDTO>> getTicketsByCustomerId(@PathVariable Integer customerId) {
-        List<TicketResponseDTO> tickets = ticketService.getTicketsByCustomerId(customerId);
+    @GetMapping("/client/{clientId}")
+    public ResponseEntity<List<TicketResponseDTO>> getTicketsByClientId(@PathVariable Integer clientId) {
+        List<TicketResponseDTO> tickets = ticketService.getTicketsByClientId(clientId);
         return ResponseEntity.ok(tickets);
     }
 
-    @GetMapping("/agent/{agentId}")
-    public ResponseEntity<List<TicketResponseDTO>> getTicketsByAgentId(@PathVariable Integer agentId) {
-        List<TicketResponseDTO> tickets = ticketService.getTicketsByAgentId(agentId);
+    @GetMapping("/employee/{employeeId}")
+    public ResponseEntity<List<TicketResponseDTO>> getTicketsByEmployeeId(@PathVariable Integer employeeId) {
+        List<TicketResponseDTO> tickets = ticketService.getTicketsByEmployeeId(employeeId);
         return ResponseEntity.ok(tickets);
     }
 

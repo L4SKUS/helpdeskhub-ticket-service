@@ -3,7 +3,6 @@ package com.helpdeskhub.tickets.model;
 import com.helpdeskhub.tickets.enums.TicketPriority;
 import com.helpdeskhub.tickets.enums.TicketStatus;
 import jakarta.persistence.*;
-import jakarta.persistence.criteria.CriteriaBuilder;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -43,10 +42,10 @@ public class Ticket {
     private TicketPriority priority;
 
     @Column(nullable = false)
-    private Integer customerId;
+    private Integer clientId;
 
     @Column(nullable = true)
-    private Integer agentId;
+    private Integer employeeId;
 
     @Column(nullable = false, updatable = false)
     @CreationTimestamp

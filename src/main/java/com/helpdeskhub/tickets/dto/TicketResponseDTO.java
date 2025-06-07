@@ -15,8 +15,8 @@ public class TicketResponseDTO {
     private String description;
     private TicketStatus status;
     private TicketPriority priority;
-    private Integer customerId;
-    private Integer agentId;
+    private Integer clientId;
+    private Integer employeeId;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 }

@@ -17,7 +17,7 @@ public class TicketMapper {
                 .description(dto.getDescription())
                 .status(dto.getStatus())
                 .priority(dto.getPriority())
-                .customerId(dto.getCustomerId())
+                .clientId(dto.getClientId())
                 .createdAt(LocalDateTime.now())
                 .updatedAt(LocalDateTime.now())
                 .build();
@@ -30,8 +30,8 @@ public class TicketMapper {
                 .description(ticket.getDescription())
                 .status(ticket.getStatus())
                 .priority(ticket.getPriority())
-                .customerId(ticket.getCustomerId())
-                .agentId(ticket.getAgentId())
+                .clientId(ticket.getClientId())
+                .employeeId(ticket.getEmployeeId())
                 .createdAt(ticket.getCreatedAt())
                 .updatedAt(ticket.getUpdatedAt())
                 .build();
@@ -50,8 +50,8 @@ public class TicketMapper {
         if (dto.getPriority() != null) {
             ticket.setPriority(dto.getPriority());
         }
-        if (dto.getAgentId() != null) {
-            ticket.setAgentId(dto.getAgentId());
+        if (dto.getEmployeeId() != null) {
+            ticket.setEmployeeId(dto.getEmployeeId());
         }
         ticket.setUpdatedAt(LocalDateTime.now());
     }

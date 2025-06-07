@@ -10,5 +10,5 @@ public class TicketUpdateDTO {
     private String description;
     private TicketStatus status;
     private TicketPriority priority;
-    private Integer agentId;
+    private Integer employeeId;
 }
